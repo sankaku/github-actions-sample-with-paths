@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./rust
+    working-directory: rust
 
 jobs:
   test:
@@ -25,13 +25,10 @@ jobs:
           override: true
 
       - name: Check format
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: -- --check
+        run: |
+          cargo fmt -- --check
 
       - name: Test
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
+        run: |
+          cargo test
 

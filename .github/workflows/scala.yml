@@ -1,0 +1,26 @@
+name: Test in scala directory
+
+on:
+  push:
+    paths:
+      - 'scala/**'
+
+defaults:
+  run:
+    working-directory: scala
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: olafurpg/setup-scala@v13
+        with:
+          java-version: "adopt@1.8"
+
+      - name: Build and Test
+        run: sbt -v +test
+
