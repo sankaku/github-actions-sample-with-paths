@@ -5,6 +5,10 @@ on:
     paths:
       - 'rust/**'
 
+defaults:
+  run:
+    working-directory: rust
+
 jobs:
   test:
     runs-on: ubuntu-latest
