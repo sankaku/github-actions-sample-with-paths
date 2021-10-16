@@ -19,6 +19,7 @@ mod test {
         let actual = calc.add(x, y);
         let expected = 3;
 
-        assert_eq!(actual, expected)
+        panic!("intentional failure")
+        // assert_eq!(actual, expected)
     }
 }
