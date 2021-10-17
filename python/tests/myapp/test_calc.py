@@ -8,5 +8,5 @@ def test_add():
     actual = add(x, y)
     expected = 3
 
-    # assert actual == expected
-    pytest.fail()
+    # pytest.fail()
+    assert actual == expected
