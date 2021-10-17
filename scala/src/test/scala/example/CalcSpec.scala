@@ -17,8 +17,8 @@ class CalcSpec extends AnyWordSpec with Matchers {
       val actual   = calc.add(x, y)
       val expected = 3
 
-      fail("intentional failure")
-      // actual mustBe expected
+      // fail("intentional failure")
+      actual mustBe expected
     }
   }
 }
